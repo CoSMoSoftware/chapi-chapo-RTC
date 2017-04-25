@@ -1,0 +1,7 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+     var socket = io({transports: ['websocket']}); //, upgrade: false});
+     socket.on("msg", function(data) {
+       console.log("Server: " + data.msg);
+     });
+</script>
